@@ -5,5 +5,5 @@ It is a simple service to practice arithmetic progression concepts. It is necess
 https://flask.palletsprojects.com/en/1.1.x/installation/
 
 #Running application in Power Shell Terminal
-$env:FLASK_APP = "ap.py" /n
+$env:FLASK_APP = "ap.py" \n
 python -m flask run
