@@ -9,3 +9,5 @@ https://flask.palletsprojects.com/en/1.1.x/installation/
 $env:FLASK_APP = "ap.py"
 
 python -m flask run
+
+Example: http://127.0.0.1:5000/sumProgression/2/2/2
