@@ -1,18 +1,17 @@
 from flask import Flask
+import json
+import ap_functions
+
 app = Flask(__name__)
 
 @app.route('/lastProgression/<root>/<firstnumber>/<count>')
-def calculate_last_number_arithmetic_progression(root, firstnumber, count) -> int:
-    return str(int(firstnumber) + (int(count)-1)*int(root))
+def lastProgression(root, firstnumber, count) -> int:
+    return ap_functions.calculate_last_number_arithmetic_progression(root,firstnumber,count)
 
 @app.route('/sumProgression/<root>/<firstnumber>/<count>')
-def calculate_sum_number_arithmetic_progression(root, firstnumber, count) -> int:
-    x = int(firstnumber)
-    mySum = x;
-    i = 1;
-    while i < int(count):
-        x = x + int(root)
-        i = i + 1
-        mySum = mySum + x
-    
-    return str(mySum)
+def sumProgression(root, firstnumber, count) -> int:
+    return ap_functions.calculate_sum_number_arithmetic_progression(root,firstnumber,count)
+
+@app.route('/getMembers/<root>/<firstnumber>/<count>')
+def getMembers(root, firstnumber, count) -> int:
+    return json.dumps(ap_functions.getApMembers(root,firstnumber,count),default=lambda o: o.encode(), indent=4)
