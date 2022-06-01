@@ -1,5 +1,5 @@
 # Objective
-It is a simple service to practice arithmetic progression concepts. It is necessary to install flask as part of this solution in order to creqte service qnd run as a local server.
+It is a simple service to practice arithmetic progression concepts. It is necessary to install flask as part of this solution in order to create service and run as a local server.
 
 # Installing Flask
 https://flask.palletsprojects.com/en/1.1.x/installation/
